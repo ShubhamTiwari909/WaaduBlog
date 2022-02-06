@@ -17,6 +17,7 @@
     "crypto": "^1.0.1",
     "express": "^4.17.2",
     "gh-pages": "^3.2.3",
+    "http-proxy-middleware": "^2.0.2",
     "mysql2": "^2.3.3",
     "nanoid": "^3.1.31",
     "node-fetch": "^3.2.0",
