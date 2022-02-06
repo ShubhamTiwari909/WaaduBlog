@@ -1,42 +1,29 @@
+packages needed for this to run are -
+
+tailwindcss
+axios
+react-icons
+
+
+
+
+package.json file - 
+
 {
-  "name": "my-app",
+  "name": "FullStackMysql",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
   "dependencies": {
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "@mui/icons-material": "^5.2.5",
-    "@mui/material": "^5.2.7",
-    "@mui/x-data-grid": "^5.2.2",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.24.0",
-    "bootstrap": "^5.1.3",
-    "crypto": "^1.0.1",
-    "express": "^4.17.2",
-    "gh-pages": "^3.2.3",
-    "mysql2": "^2.3.3",
-    "nanoid": "^3.1.31",
-    "node-fetch": "^3.2.0",
-    "nodemon": "^2.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
-    "react-reveal": "^1.2.2",
-    "react-router-dom": "^6.2.1",
     "react-scripts": "^5.0.0",
-    "react-speech-kit": "^3.0.1",
-    "react-spring": "^9.3.3",
-    "reactstrap": "^9.0.1",
     "save-dev": "0.0.1-security",
-    "stream-chat": "^5.5.0",
-    "stream-chat-react": "^6.12.2",
-    "styled-components": "^5.3.3",
-    "unsplash-js": "^7.0.15",
-    "util": "^0.12.4",
-    "vite": "^2.7.10",
     "web-vitals": "^2.1.2"
   },
   "scripts": {
@@ -44,8 +31,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -71,3 +56,5 @@
     "tailwindcss": "^3.0.16"
   }
 }
+
+
