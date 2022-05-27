@@ -5,8 +5,6 @@ import image from './Body-bg.jpeg';
 
 
 
-// const Bounce = styled.div`animation: 2s ${keyframes`${bounce}`}`;
-
 const initialList = [
   {
     id:'a',
@@ -20,12 +18,12 @@ const initialList = [
  
 ];
 
-const CommentsList = [
-  {
-    id:'a',
-    commentInput:""
-  },
-];
+// const CommentsList = [
+//   {
+//     id:'a',
+//     commentInput:""
+//   },
+// ];
 
 
 const BlogCreate = () => {
@@ -59,86 +57,87 @@ const BlogCreate = () => {
 
 
  //comment styling and states
- const [displaycomment, setDisplaycomment] = useState("none");
- const [commentsList, setCommentsList] = useState(CommentsList);
- const [commentInput, setCommentInput] = useState('');
+//  const [displaycomment, setDisplaycomment] = useState("none");
+//  const [commentsList, setCommentsList] = useState(CommentsList);
+//  const [commentInput, setCommentInput] = useState('');
 
- const comments = {
-    display:displaycomment,
-    overflowY:"scroll",
-    scrollbarWidth: 'none',
-    width:"550px",
-    height:"200px",
-    padding:'1rem',
-    margin:'1rem auto',
-    borderRadius:"10px",
-    background: "#41295a",
-    background: "-webkit-linear-gradient(to right, #0f0c29, #302b63, #24243e)",
-    background: "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
-    flexDirection:"column",
-    justifyContent:"space-between"
+//  const comments = {
+//    color:"black",
+//     display:displaycomment,
+//     overflowY:"scroll",
+//     scrollbarWidth: 'none',
+//     width:"550px",
+//     height:"200px",
+//     padding:'1rem',
+//     margin:'1rem auto',
+//     borderRadius:"10px",
+//     background: "#41295a",
+//     background: "-webkit-linear-gradient(to right, #0f0c29, #302b63, #24243e)",
+//     background: "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
+//     flexDirection:"column",
+//     justifyContent:"space-between"
 
-  }
+//   }
 
-  const comment_section ={
-  float:"left",
-  padding:"0.5rem",
-  margin:"1rem",
-  width:"30rem",
-  height:"auto",
-  backgroundColor:"white",
-  borderRadius:"5px",
-  paddingBottom:"15px",
-  textAlign:'left',
-  display:"flex",
-  flexDirection:'column',
-  justifyContent:"space-between",
-  fontFamily: 'Franklin Gothic Medium,Arial Narrow,Arial, sans-serif'
-  }   
-
-
-  const comment_Input = {
-    justifyContent:"center",
-    marginTop:"1rem"
-  }
+//   const comment_section ={
+//   float:"left",
+//   padding:"0.5rem",
+//   margin:"1rem",
+//   width:"30rem",
+//   height:"auto",
+//   backgroundColor:"white",
+//   borderRadius:"5px",
+//   paddingBottom:"15px",
+//   textAlign:'left',
+//   display:"flex",
+//   flexDirection:'column',
+//   justifyContent:"space-between",
+//   fontFamily: 'Franklin Gothic Medium,Arial Narrow,Arial, sans-serif'
+//   }   
 
 
-
-/*Functions */
-  function handleComment()
-  {
-    if(displaycomment==="none")
-    {
-    setDisplaycomment("flex");
-    }
-    else{
-      setDisplaycomment("none");
-    }
-  }
+//   const comment_Input = {
+//     justifyContent:"center",
+//     marginTop:"1rem"
+//   }
 
 
-  function handleChange(e)
-  {
-  setCommentInput(e.target.value);
-  }
+
+// /*Functions */
+//   function handleComment()
+//   {
+//     if(displaycomment==="none")
+//     {
+//     setDisplaycomment("flex");
+//     }
+//     else{
+//       setDisplaycomment("none");
+//     }
+//   }
 
 
-  function handleAddComment()
-  {
-    const newCommentList = commentsList.concat({commentInput,id:uuidv4()});
-    setCommentsList(newCommentList);
-    setCommentInput('');
-  }
+//   function handleChange(e)
+//   {
+//   setCommentInput(e.target.value);
+//   }
 
 
-  function handleRemoveComment(id)
-  {
-  const filterCommentList = commentsList.filter((items) =>items.id !== id);
-  setCommentsList(filterCommentList);
-  }
+//   function handleAddComment()
+//   {
+//     const newCommentList = commentsList.concat({commentInput,id:uuidv4()});
+//     setCommentsList(newCommentList);
+//     setCommentInput('');
+//   }
 
 
-  /*comment section end here*/
+//   function handleRemoveComment(id)
+//   {
+//   const filterCommentList = commentsList.filter((items) =>items.id !== id);
+//   setCommentsList(filterCommentList);
+//   }
+
+
+//   /*comment section end here*/
 
 
   function handleTitle(event)
@@ -171,11 +170,11 @@ const BlogCreate = () => {
     
   }
 
-  function handleRemove(id)
-  {
-    const filterList = list.filter((item) =>item.id !== id);
-    setList(filterList);
-  }
+  // function handleRemove(id)
+  // {
+  //   const filterList = list.filter((item) =>item.id !== id);
+  //   setList(filterList);
+  // }
 
 
 //adding image logic copied!!
@@ -230,7 +229,7 @@ const BlogCreate = () => {
                   }}
                 />
     
-                <button type="button" className="btn btn-primary" onClick={handleAdd}>Add </button>
+                <button type="button" className="btn btn-outline-primary" onClick={handleAdd}>Add </button>
 
               </div>
         </div>
@@ -269,35 +268,7 @@ const BlogCreate = () => {
                     
                 </div>
                
-              </div>
-               <div className="text-center delete-btn">
-                  <button className="btn btn-danger" onClick={() => handleRemove(item.id)}>Delete</button>
-                  <button className="btn"  key={item.id}><i class="fa fa-thumbs-up" aria-hidden="true" style={{color:"blue"}}></i></button>
-                  <button className="btn"  key={item.id}><i class="fa fa-thumbs-down" aria-hidden="true" style={{color:"red"}}></i></button>
-                  <button onClick={handleComment} className="border-0 rounded-circle"><i class="fa fa-comment text-secondary fa-lg" aria-hidden="true"></i></button>
-               </div>
-
-               {/* comments  */}
-            <div style={comments} className="comment" key={item.id}>
-               {commentsList.map((items) => (
-                 <div style={comment_section} key={items.id}>
-                      <p key={items.id}>{items.commentInput}</p>
-                      <div style={{display:"flex",alignItems:"baseline"}}>
-                        <button className="btn btn-sm" style={{width:"25px",height:"25px"}} onClick={() => handleRemoveComment(items.id)}>
-                        <i class="fa fa-trash fa-sm text-dark" aria-hidden="true"></i>
-                        </button>
-                        <button className="btn"  key={item.id}><i class="fa fa-thumbs-up" aria-hidden="true" style={{color:"blue"}}></i></button>
-                        <button className="btn" key={item.id}><i class="fa fa-thumbs-down" aria-hidden="true" style={{color:"red"}}></i></button>
-                     </div>
-                  </div>
-                   ))}
-             </div>
-
-              
-             <div className="form-inline" style={comment_Input} key={item.id}>
-                  <input type="text" onChange={handleChange}  placeholder="Enter comments here" className="form-control"/>
-                  <button key={item.id} className="btn btn-light ml-2" onClick={handleAddComment}><i class="fa fa-paper-plane fa-lg" aria-hidden="true"></i></button>
-              </div>
+              </div>  
 
           </div>
 

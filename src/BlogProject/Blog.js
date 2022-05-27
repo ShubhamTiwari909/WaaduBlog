@@ -51,9 +51,9 @@ function Blog() {
                                 <a className="nav-link text-dark" href="#footer_section ">Contact</a>
                             </li>
                         </ul>
-                        <form className="form-inline my-2 my-lg-0">
-                            <li className="nav-link"><NavLink to="/signup" style={{ color: 'magenta' }} target="blank">Signup</NavLink></li>
-                            <li className="nav-link"><NavLink to="/login" style={{ color: 'magenta' }} target="blank">Login</NavLink></li>
+                        <form className="inline my-2 my-lg-0">
+                            <li className="nav-link btn btn-outline-primary"><NavLink to="/signup" style={{ color: 'black' }} >Signup</NavLink></li>
+                            <li className="nav-link btn btn-outline-primary"><NavLink to="/login" style={{ color: 'black' }} >Login</NavLink></li>
                         </form>
                     </div>
                 </nav>
