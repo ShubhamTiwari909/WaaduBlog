@@ -62,7 +62,6 @@ const BlogCreate = () => {
 //  const [commentInput, setCommentInput] = useState('');
 
 //  const comments = {
-//    color:"black",
 //     display:displaycomment,
 //     overflowY:"scroll",
 //     scrollbarWidth: 'none',
@@ -137,7 +136,7 @@ const BlogCreate = () => {
 //   }
 
 
-//   /*comment section end here*/
+  /*comment section end here*/
 
 
   function handleTitle(event)
@@ -170,11 +169,11 @@ const BlogCreate = () => {
     
   }
 
-  // function handleRemove(id)
-  // {
-  //   const filterList = list.filter((item) =>item.id !== id);
-  //   setList(filterList);
-  // }
+  function handleRemove(id)
+  {
+    const filterList = list.filter((item) =>item.id !== id);
+    setList(filterList);
+  }
 
 
 //adding image logic copied!!
@@ -229,7 +228,7 @@ const BlogCreate = () => {
                   }}
                 />
     
-                <button type="button" className="btn btn-outline-primary" onClick={handleAdd}>Add </button>
+                <button type="button" className="btn btn-primary" onClick={handleAdd}>Add </button>
 
               </div>
         </div>
@@ -268,7 +267,12 @@ const BlogCreate = () => {
                     
                 </div>
                
-              </div>  
+              </div>
+               <div className="text-center delete-btn">
+                  <button className="btn btn-danger" onClick={() => handleRemove(item.id)}>Delete</button>
+                  {/* <button className="btn"  key={item.id}><i class="fa fa-thumbs-up" aria-hidden="true" style={{color:"blue"}}></i></button>
+                  <button className="btn"  key={item.id}><i class="fa fa-thumbs-down" aria-hidden="true" style={{color:"red"}}></i></button> */}
+               </div>
 
           </div>
 
