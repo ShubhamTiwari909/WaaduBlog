@@ -29,7 +29,7 @@ function Blog() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                                <div className="nav-link"><NavLink to="/home" style={{ color: 'magenta' }}>Home <span className="sr-only">(current)</span></NavLink></div>
+                                <div className="nav-link"><NavLink to="/" style={{ color: 'magenta' }}>Home <span className="sr-only">(current)</span></NavLink></div>
                             </li>
                             <li className="nav-item dropdown">
                                 <div className="nav-link dropdown-toggle text-dark" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
