@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Navbar from './navbar';
 import AboutMe from './AboutMe';
 import Help from './Help';
@@ -11,8 +10,7 @@ import Travel from './Travel';
 import Sports from './Sports';
 import Fitness from './Fitness';
 
-import {
-    BrowserRouter as Router, Routes, Route, Link, NavLink
+import { Routes, Route, NavLink
 } from "react-router-dom";
 
 import SignUpPage from './SignUpPage';
@@ -21,7 +19,7 @@ import LoginPage from './LoginPage';
 function Blog() {
     return (
         <div>
-            <Router>
+       
                 <nav className="navbar navbar-expand-lg navbar-light bg-light pl-5 font-weight-bold text-dark fixed-top">
                     <a className="navbar-brand">WaaduBlogs</a>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,19 +29,19 @@ function Blog() {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mr-auto">
                             <li className="nav-item active">
-                                <div className="nav-link"><NavLink to="/home" style={{ color: 'magenta' }} target="blank">Home <span className="sr-only">(current)</span></NavLink></div>
+                                <div className="nav-link"><NavLink to="/home" style={{ color: 'magenta' }}>Home <span className="sr-only">(current)</span></NavLink></div>
                             </li>
                             <li className="nav-item dropdown">
                                 <div className="nav-link dropdown-toggle text-dark" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     Categories
                                 </div>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li className="dropdown-item"><NavLink to="/fashion" style={{ color: 'magenta' }} target="blank">Fashion</NavLink></li>
-                                    <li className="dropdown-item"><NavLink to="/food" style={{ color: 'magenta' }} target="blank">Food</NavLink></li>
-                                    <li className="dropdown-item"><NavLink to="/music" style={{ color: 'magenta' }} target="blank">Music</NavLink></li>
-                                    <li className="dropdown-item"><NavLink to="/travel" style={{ color: 'magenta' }} target="blank">Travel</NavLink></li>
-                                    <li className="dropdown-item"><NavLink to="/sports" style={{ color: 'magenta' }} target="blank">Sports</NavLink></li>
-                                    <li className="dropdown-item"><NavLink to="/fitness" style={{ color: 'magenta' }} target="blank">Fitness</NavLink></li>
+                                    <li className="dropdown-item"><NavLink to="/fashion" style={{ color: 'magenta' }} >Fashion</NavLink></li>
+                                    <li className="dropdown-item"><NavLink to="/food" style={{ color: 'magenta' }} >Food</NavLink></li>
+                                    <li className="dropdown-item"><NavLink to="/music" style={{ color: 'magenta' }} >Music</NavLink></li>
+                                    <li className="dropdown-item"><NavLink to="/travel" style={{ color: 'magenta' }} >Travel</NavLink></li>
+                                    <li className="dropdown-item"><NavLink to="/sports" style={{ color: 'magenta' }} >Sports</NavLink></li>
+                                    <li className="dropdown-item"><NavLink to="/fitness" style={{ color: 'magenta' }} >Fitness</NavLink></li>
                                 </ul>
                             </li>
                             <li className="nav-item">
@@ -59,9 +57,7 @@ function Blog() {
                         </form>
                     </div>
                 </nav>
-            </Router>
-
-            <Router>
+            
                 <Routes>
                     <Route path="/" element={
                         <div>
@@ -106,7 +102,7 @@ function Blog() {
                     </Route>
                 </Routes>
 
-            </Router>
+      
             <Footer />
         </div>
     )
