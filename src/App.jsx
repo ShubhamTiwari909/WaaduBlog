@@ -1,9 +1,9 @@
 import React from 'react'
-import CRUD from './components/FirebaseCRUD/CRUD'
+import Blog from './components/BlogProject/Blog'
 function App() {
   return (
     <div>
-      <CRUD />
+      <Blog />
     </div>
   )
 }
