@@ -1,121 +1,46 @@
-import React from 'react';
-import './Waaducss.css'
+import React from 'react'
+import Signup from './SignUpPage';
 
-function DarkMode(props) {
+import {Routes,Route,NavLink} from 'react-router-dom';
+function LoginPage() {
     return (
-        <div>
-            <button className="dark-btn" onClick={props.onClick}>Dark </button>
-        </div>
-    );
-}
-
-function LightMode(props) {
-    return (
-        <div>
-            <button className="light-btn" onClick={props.onClick}>Light</button>
-        </div>
-    );
-}
-
-
-function DarkLoginPage(props) {
-    return (
-        <div>
-            <form className="Dark-form-page w-shadow-large">
-
-                <div class="form-group">
-                    <label htmlFor="">Email</label><input type="text" className="form-control" id="" aria-describedby="helpId" placeholder="Enter your email..." />
-                </div>
-
-                <div class="form-group">
-                    <label htmlFor="">Password</label><input type="text" className="form-control" id="" aria-describedby="helpId" placeholder="Enter your password..." />
-                </div>
-
-                <div className="form-group">
-                    <button className="btn btn-primary mt-4" >Login</button>
-                </div>
-
-            </form>
-        </div>
-    );
-}
-
-function LightLoginPage(props) {
-    return (
-        <div>
-            <form className="Light-form-page w-shadow-large">
-                <div class="form-group">
-                    <label htmlFor="">Email</label><input type="text" className="form-control" id="" aria-describedby="helpId" placeholder="Enter your email..." />
-                </div>
-
-                <div class="form-group">
-                    <label htmlFor="">Password</label><input type="text" className="form-control" id="" aria-describedby="helpId" placeholder="Enter your password..." />
-                </div>
-
-                <div className="form-group">
-                    <button className="btn btn-primary mt-4" >Login</button>
-                </div>
-            </form>
-        </div>
-    );
-}
-
-
-function Login(props) {
-    const isMode = props.isMode;
-    if (isMode) {
-        return <DarkLoginPage />
-    }
-    return <LightLoginPage />
-
-}
-
-
-class LoginPage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleDark = this.handleDark.bind(this);
-        this.handleLight = this.handleLight.bind(this);
-        this.state = { isMode: false };
-    }
-
-    handleDark() {
-        this.setState(
-            {
-                isMode: true,
-            }
-        );
-    }
-
-    handleLight() {
-        this.setState(
-            {
-                isMode: false,
-            }
-        );
-    }
-
-    render() {
-        const isMode = this.state.isMode;
-        let button;
-
-        if (isMode) {
-            button = <LightMode onClick={this.handleLight} />;
-        }
-        else {
-            button = <DarkMode onClick={this.handleDark} />;
-        }
-
-        return (
-            <div className="main-login-page">
-
-                <div className="main">
-                    <div className="text-center mb-2">{button}</div>
-                    <Login isMode={isMode} />
-                </div>
+        <div className="my-5">
+            <div className="h-screen bg-indigo-100 flex justify-center items-center">
+                <form className="w-full max-w-xs bg-white flex flex-col py-5 px-8 rounded-lg shadow-lg" action="">
+                    <label className="text-gray-700 font-bold py-2" for="">Email</label>
+                    <input className="text-gray-700 shadow border rounded border-gray-300 focus:outline-none focus:shadow-outline py-1 px-3 mb-3"
+                        type="email" placeholder="Email" />
+                    <label className="text-gray-700 font-bold py-2" for="">Password</label>
+                    <input className="text-gray-700 shadow border rounded border-gray-300 mb-3 py-1 px-3 focus:outline-none focus:shadow-outline"
+                        type="password" placeholder="********" />
+                    <div className="flex justify-between items-center my-4">
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded py-2 px-4">
+                            Sign In
+                        </button>
+                        <div className="text-blue-600 hover:text-blue-800 font-bold">
+                            Forgot Password?
+                        </div>
+                    </div>
+                    <div className="grid grid-cols-2 justify-between my-4">
+                        <div className="text-slate-600 hover:text-blue-800 font-bold" >
+                            Dont have an Account?
+                        </div>
+                        <div className="place-self-end">
+                            <button className="bg-green-500 hover:bg-slate-700 text-white font-bold rounded py-1 px-3">
+                                <NavLink to="/signup" className="text-white">Sign Up</NavLink>
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
-        );
-    }
+
+            <div>
+                <Routes>
+                    <Route path="/signup" element={<Signup />} />
+                </Routes>
+            </div>
+        </div>
+    )
 }
 
-export default LoginPage;
+export default LoginPage

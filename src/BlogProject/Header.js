@@ -6,11 +6,11 @@ import {
 
 
 
-function Navbar() {
+function Header() {
     return (
         <div>
             <div className="header-content">
-                <p className="text-center header-content-text" style={{ fontSize: "20px", fontFamily: 'Red Hat Display' }}>Ambitions is the first step towards</p>
+                <p className="text-center header-content-text" style={{ fontSize: "20px", fontFamily: 'Red Hat Display' }}>Ambition is the first step towards</p>
                 <h1 className="text-center success-text">
                     SUCCESS
                 </h1>
@@ -29,4 +29,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Header

@@ -1,30 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import { React, useState, useRef } from 'react';
-import image from './Body-bg.jpeg';
 
-
-
-
-const initialList = [
-  {
-    id: '19120033',
-    title: 'Title',
-    description: 'This is Blog Body',
-    like: false,
-    dislike: false,
-    image: image,
-    result: "",
-  },
-
-];
-
-// const CommentsList = [
-//   {
-//     id:'a',
-//     commentInput:""
-//   },
-// ];
-
+const initialList = [];
 
 const BlogCreate = () => {
 
@@ -52,88 +29,6 @@ const BlogCreate = () => {
     }
   }
 
-
-  //comment styling and states
-  //  const [displaycomment, setDisplaycomment] = useState("none");
-  //  const [commentsList, setCommentsList] = useState(CommentsList);
-  //  const [commentInput, setCommentInput] = useState('');
-
-  //  const comments = {
-  //     display:displaycomment,
-  //     overflowY:"scroll",
-  //     scrollbarWidth: 'none',
-  //     width:"550px",
-  //     height:"200px",
-  //     padding:'1rem',
-  //     margin:'1rem auto',
-  //     borderRadius:"10px",
-  //     background: "#41295a",
-  //     background: "-webkit-linear-gradient(to right, #0f0c29, #302b63, #24243e)",
-  //     background: "linear-gradient(to right, #0f0c29, #302b63, #24243e)",
-  //     flexDirection:"column",
-  //     justifyContent:"space-between"
-
-  //   }
-
-  //   const comment_section ={
-  //   float:"left",
-  //   padding:"0.5rem",
-  //   margin:"1rem",
-  //   width:"30rem",
-  //   height:"auto",
-  //   backgroundColor:"white",
-  //   borderRadius:"5px",
-  //   paddingBottom:"15px",
-  //   textAlign:'left',
-  //   display:"flex",
-  //   flexDirection:'column',
-  //   justifyContent:"space-between",
-  //   fontFamily: 'Franklin Gothic Medium,Arial Narrow,Arial, sans-serif'
-  //   }   
-
-
-  //   const comment_Input = {
-  //     justifyContent:"center",
-  //     marginTop:"1rem"
-  //   }
-
-
-
-  // /*Functions */
-  //   function handleComment()
-  //   {
-  //     if(displaycomment==="none")
-  //     {
-  //     setDisplaycomment("flex");
-  //     }
-  //     else{
-  //       setDisplaycomment("none");
-  //     }
-  //   }
-
-
-  //   function handleChange(e)
-  //   {
-  //   setCommentInput(e.target.value);
-  //   }
-
-
-  //   function handleAddComment()
-  //   {
-  //     const newCommentList = commentsList.concat({commentInput,id:uuidv4()});
-  //     setCommentsList(newCommentList);
-  //     setCommentInput('');
-  //   }
-
-
-  //   function handleRemoveComment(id)
-  //   {
-  //   const filterCommentList = commentsList.filter((items) =>items.id !== id);
-  //   setCommentsList(filterCommentList);
-  //   }
-
-
-  /*comment section end here*/
 
 
   function handleTitle(event) {
@@ -193,40 +88,28 @@ const BlogCreate = () => {
 
   return (
     <div>
-      <div className="text-center m-5">
-        <div className="input-boxes w-grid w-place-content-center w-p-5">
-          <div className="w-card w-card-light form-group w-shadow-large w-p-4">
-            <div className="input-group mb-3">
-              <span className="input-group-text w-black-gradient w-text-champagne" id="basic-addon1">Title</span>
-              <input type="text" value={title} onChange={handleTitle} className="w-form-input w-border-solid w-border-width-1 w-border-apricot
-                   "
-                placeholder="Title" aria-describedby="helpId"></input>
-            </div>
-
-            <div className="input-group mb-3">
-              <span className="input-group-text w-black-gradient w-text-champagne" id="basic-addon1">Blog</span>
-              <textarea type="text" value={description} onChange={handleDescription} className="w-form-input w-border-solid w-border-width-1 w-border-apricot
-                   "
-                placeholder="Description" aria-describedby="helpId" />
-            </div>
-
-            <p className="float-left"><span className="input-group-text w-black-gradient w-text-champagne" id="basic-addon1">Image</span></p>
-
-            <input
-              type="file"
-              className="form-control"
-              onChange={(e) => {
-                setImage(e.target.files[0]);
-                uploader(e);
-              }}
-            />
-            <div className="w-text-center">
+      <div className="h-screen bg-indigo-100 flex justify-center items-center">
+        <form className="w-full max-w-xs lg:max-w-md md:max-w-sm bg-white flex flex-col py-5 px-8 rounded-lg shadow-lg" action="">
+          <label className="text-gray-700 font-bold py-2" htmlFor="">Title</label>
+          <input className="text-gray-700 shadow border-2 border-purple-300 rounded focus:outline-none focus:shadow-outline py-1 px-3 mb-3"
+            type="text" placeholder="Title" value={title} onChange={handleTitle} />
+          <label className="text-gray-700 font-bold py-2" htmlFor="">Description</label>
+          <textarea className="text-gray-700 border-2 border-purple-300 shadow roundedmb-3 py-1 px-3 focus:outline-none focus:shadow-outline"
+            placeholder="Description" value={description} onChange={handleDescription}></textarea>
+          <label className="text-gray-700 font-bold py-2" htmlFor="">Image</label>
+          <input className="text-gray-700 border-2 border-purple-300 shadow rounded  focus:outline-none focus:shadow-outline py-1 px-3 mb-3"
+            type="file"
+            onChange={(e) => {
+              setImage(e.target.files[0]);
+              uploader(e);
+            }} />
+          <div className="flex justify-center my-4">
+            <div className="">
               <button type="button" className="w-p-left-3 w-p-right-3 w-p-top-1 w-p-bottom-1 w-border-radius-3 w-m-top-4 w-m-right-2
                w-shadow-medium w-border-solid w-border-width-1 w-border-purple w-text-orchid w-darkmode-hover" onClick={handleAdd}>Add </button>
             </div>
-
           </div>
-        </div>
+        </form>
       </div>
 
 
@@ -234,7 +117,7 @@ const BlogCreate = () => {
         <ul className="nav justify-content-center display-box-blogs">
           {list.map((item) => (
             <div key={item.id}>
-              <div className="individual-blog" style={blog_body}>
+              <div className="individual-blog w-shadow-medium" style={blog_body}>
                 <div className="blog-body">
                   <li className="nav-item text-center blog-title w-m-top-7" key={item.id}>{item.title}
                     <span>

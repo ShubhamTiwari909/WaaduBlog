@@ -1,133 +1,57 @@
-import React from 'react';
-
-
-function DarkMode(props) {
+import React from 'react'
+import Login from './LoginPage'
+import { Routes, Route, NavLink } from 'react-router-dom'
+function SignUpPage() {
     return (
-        <div>
-            <button className="dark-btn" onClick={props.onClick}>Dark </button>
-        </div>
-    );
-}
+        <div className="py-20 h-screen bg-indigo-100 px-2 my-8">
+            <div className="max-w-md mx-auto bg-white rounded-lg overflow-hidden md:max-w-md">
+                <div className="md:flex">
+                    <div className="w-full p-3 px-6 py-10">
 
-function LightMode(props) {
-    return (
-        <div>
-            <button className="light-btn" onClick={props.onClick}>Light</button>
-        </div>
-    );
-}
+                        <div className="text-center">
+                            <span className="text-xl text-gray-700">Registration Form</span>
+                        </div>
 
+                        <div className="mt-3 relative">
+                            <span className="absolute p-1 bottom-8 ml-2 bg-white text-gray-400 ">First name</span>
+                            <input type="text" className="h-12 px-2 w-full border-2 rounded focus:outline-none focus:border-red-600" />
+                        </div>
 
-function DarkLogin(props) {
-    return (
-        <div>
-            <form className="Dark-form-page w-shadow-large">
-                <div class="form-group">
-                    <label htmlFor="">UserName</label><input type="text" className="form-control" id="" aria-describedby="helpId" placeholder="Enter your name..." />
-                </div>
-
-                <div class="form-group">
-                    <label htmlFor="">Email</label><input type="text" className="form-control" id="" aria-describedby="helpId" placeholder="Enter your email..." />
-                </div>
-
-                <div class="form-group">
-                    <label htmlFor="">Password</label><input type="text" className="form-control" id="" aria-describedby="helpId" placeholder="Enter your password..." />
-                </div>
-
-                <div class="form-group">
-                    <label htmlFor="">Confirm Password</label><input type="text" className="form-control" id="" aria-describedby="helpId" placeholder="Enter your confirm password..." />
-
-                    <button className="btn btn-primary mt-4" >Submit</button>
-
-                </div>
-            </form>
-        </div>
-    );
-}
-
-function LightLogin(props) {
-    return (
-        <div>
-            <form className="Light-form-page w-shadow-large">
-                <div class="form-group">
-                    <label htmlFor="">UserName</label><input type="text" className="form-control" id="" aria-describedby="helpId" placeholder="Enter your name..." />
-                </div>
-
-                <div class="form-group">
-                    <label htmlFor="">Email</label><input type="text" className="form-control" id="" aria-describedby="helpId" placeholder="Enter your email..." />
-                </div>
-
-                <div class="form-group">
-                    <label htmlFor="">Password</label><input type="text" className="form-control" id="" aria-describedby="helpId" placeholder="Enter your password..." />
-                </div>
-
-                <div class="form-group">
-                    <label htmlFor="">Confirm Password</label><input type="text" className="form-control" id="" aria-describedby="helpId" placeholder="Enter your confirm password..." />
-
-                    <button className="btn btn-primary mt-4" >Submit</button>
-
-                </div>
-            </form>
-        </div>
-    );
-}
+                        <div className="mt-4 relative">
+                            <span className="absolute p-1 bottom-8 ml-2 bg-white text-gray-400 ">Last name</span>
+                            <input type="text" className="h-12 px-2 w-full border-2 rounded focus:outline-none focus:border-red-600" />
+                        </div>
 
 
-function Login(props) {
-    const isMode = props.isMode;
-    if (isMode) {
-        return <DarkLogin />
-    }
-    return <LightLogin />
+                        <div className="mt-4 relative">
+                            <span className="absolute p-1 bottom-8 ml-2 bg-white text-gray-400 ">Email</span>
+                            <input type="text" className="h-12 px-2 w-full border-2 rounded focus:outline-none focus:border-red-600" />
+                        </div>
 
-}
+                        <div className="mt-4 relative">
+                            <span className="absolute p-1 bottom-8 ml-2 bg-white text-gray-400 ">Password</span>
+                            <input type="text" className="h-12 px-2 w-full border-2 rounded focus:outline-none focus:border-red-600" />
+                        </div>
 
+                        <div className="mt-4 flex justify-center">
+                            <button className="h-12 w-1/2 lg:w-1/4 md:1/3 bg-green-600 text-white rounded hover:bg-green-700">Register</button>
+                        </div>
 
-class SignUpPage extends React.Component {
-    constructor(props) {
-        super(props);
-        this.handleDark = this.handleDark.bind(this);
-        this.handleLight = this.handleLight.bind(this);
-        this.state = { isMode: false };
-    }
-
-    handleDark() {
-        this.setState(
-            {
-                isMode: true,
-            }
-        );
-    }
-
-    handleLight() {
-        this.setState(
-            {
-                isMode: false,
-            }
-        );
-    }
-
-    render() {
-        const isMode = this.state.isMode;
-        let button;
-
-        if (isMode) {
-            button = <LightMode onClick={this.handleLight} />;
-        }
-        else {
-            button = <DarkMode onClick={this.handleDark} />;
-        }
-
-        return (
-            <div className="main-login-page">
-
-                <div className="main">
-                    <div className="text-center mb-2">{button}</div>
-                    <Login isMode={isMode} />
+                        <div className="mt-10 flex">
+                            <div className="mr-4">Already have an account?</div>
+                            <button className="h-10 w-1/3 bg-blue-600 text-white rounded hover:bg-blue-700 hover:text-white">
+                                <NavLink to="/login" className="text-white">Sign in</NavLink>
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        );
-    }
+            <Routes>
+                <Route path="/login" element= {<Login />} />
+            </Routes>
+        </div>
+       
+    )
 }
 
-export default SignUpPage;
+export default SignUpPage

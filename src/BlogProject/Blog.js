@@ -1,4 +1,4 @@
-import Navbar from './navbar';
+import Header from './Header';
 import AboutMe from './About';
 import Contact from './Contact'
 import Help from './CategorySection';
@@ -24,7 +24,7 @@ function Blog() {
         <div>
 
             <nav className="navbar navbar-expand-lg navbar-dark w-p-left-5 font-weight-bold fixed-top w-black-gradient w-text-champagne w-p-top-3 w-p-bottom-3 ">
-                <a className="navbar-brand">WaaduBlogs</a>
+                <div className="navbar-brand">WaaduBlogs</div>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -74,7 +74,7 @@ function Blog() {
             <Routes>
                 <Route path="/" element={
                     <div>
-                        <Navbar />
+                        <Header />
                         <Help />
                     </div>
                 }>

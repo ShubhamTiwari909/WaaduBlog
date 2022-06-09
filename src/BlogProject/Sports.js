@@ -1,11 +1,14 @@
 import React from 'react'
 import BlogCreate from './BlogCreate'
+import './Waaducss.css';
 function Sports() {
     return (
         <div className="fashion-main">
             <div className="sports-background"></div>
-            <h1 className="display-1 text-center text-dark">Sports Blogs</h1>
-            <h3 className="text-center">(Add your blog here)</h3>
+            <div className="w-m-top-4 w-m-bottom-5">
+                <h1 className="display-1 text-center text-dark">Sports Blogs</h1>
+                <h3 className="text-center">(Add your blog here)</h3>
+            </div>
             <BlogCreate />
         </div>
     )
