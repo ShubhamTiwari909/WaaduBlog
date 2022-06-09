@@ -194,8 +194,8 @@ const BlogCreate = () => {
   return (
     <div>
       <div className="text-center m-5">
-        <div className="input-boxes w-grid w-place-content-center w-p-4">
-          <div className="w-card w-card-light form-group w-shadow-large w-p-3">
+        <div className="input-boxes w-grid w-place-content-center w-p-5">
+          <div className="w-card w-card-light form-group w-shadow-large w-p-4">
             <div className="input-group mb-3">
               <span className="input-group-text w-black-gradient w-text-champagne" id="basic-addon1">Title</span>
               <input type="text" value={title} onChange={handleTitle} className="w-form-input w-border-solid w-border-width-1 w-border-apricot

@@ -2570,6 +2570,9 @@
     .sm-text-center{
         text-align:center;
     }
+    .w-form-input{
+        width:150px;
+    }
 
 }
 
@@ -2629,7 +2632,7 @@
     }
 
     .w-form-input-animated:hover {
-        width: 200px;
+        width: 100px;
     }
     .w-square{
         width: 250px;
