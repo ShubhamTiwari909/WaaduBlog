@@ -113,7 +113,7 @@ const BlogCreate = () => {
       </div>
 
 
-      <div className="display-box w-m-top-10" data-aos="fade-right">
+      <div data-aos="fade-right">
         <ul className="nav justify-content-center display-box-blogs">
           {list.map((item) => (
             <div key={item.id}>
@@ -143,8 +143,6 @@ const BlogCreate = () => {
               </div>
               <div className="text-center delete-btn">
                 <button className="btn btn-danger" onClick={() => handleRemove(item.id)}>Delete</button>
-                {/* <button className="btn"  key={item.id}><i class="fa fa-thumbs-up" aria-hidden="true" style={{color:"blue"}}></i></button>
-                  <button className="btn"  key={item.id}><i class="fa fa-thumbs-down" aria-hidden="true" style={{color:"red"}}></i></button> */}
               </div>
 
             </div>

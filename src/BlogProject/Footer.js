@@ -5,7 +5,7 @@ function Footer() {
     <div>
       <footer className="text-gray-400 bg-gray-900 body-font">
         <div className="container px-5 py-24 mx-auto">
-          <div className="flex flex-wrap md:text-left text-center -mb-10 -mx-4">
+          <div className="flex flex-wrap md:text-left text-center -mx-4">
 
             <div className="lg:w-1/3 md:w-1/2 w-full px-4">
               <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">Contacts</h2>
