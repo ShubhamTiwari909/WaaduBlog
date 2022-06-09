@@ -1561,32 +1561,32 @@
 /* text alignment */
 
 /* center */
-.text-center {
+.w-text-center {
     text-align: center;
 }
 
 /* start */
-.text-start {
+.w-text-start {
     text-align: start;
 }
 
 /* end */
-.text-end {
+.w-text-end {
     text-align: end;
 }
 
 /* left */
-.text-left {
+.w-text-left {
     text-align: left;
 }
 
 /* right */
-.text-right {
+.w-text-right {
     text-align: right;
 }
 
 /* justify */
-.text-justify {
+.w-text-justify {
     text-align: justify;
 }
 
@@ -2090,7 +2090,6 @@
 .w-card-dark-bordered,
 .w-card-shadowed {
     margin: 0.6rem 0.6rem;
-    padding: 1.5rem 1.5rem;
     border-radius: 5px;
     transition:all 1.4s ease-in-out;
 }
@@ -2535,7 +2534,7 @@
 @media only screen and (min-width: 200px) and (max-width:595px) {
     .w-card {
         width: 15rem;
-        padding: 0.3rem
+        padding: 0.8rem
     }
 
     .w-card-heading,

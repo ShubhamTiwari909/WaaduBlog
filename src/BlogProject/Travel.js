@@ -8,7 +8,7 @@ function Travel() {
             <h1 className="display-1 text-center text-dark">Travel Blogs</h1>
             <h3 className="text-center">(Add your blog here)</h3>
             <BlogCreate />
-            
+
         </div>
     )
 }
