@@ -1940,7 +1940,7 @@
 }
 
 .w-form-input-animated:hover {
-    width: 250px;
+    width: 180px;
 }
 
 
@@ -2629,7 +2629,7 @@
     }
 
     .w-form-input-animated:hover {
-        width: 400px;
+        width: 200px;
     }
     .w-square{
         width: 250px;

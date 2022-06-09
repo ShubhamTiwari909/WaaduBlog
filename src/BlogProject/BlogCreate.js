@@ -195,18 +195,18 @@ const BlogCreate = () => {
     <div>
       <div className="text-center m-5">
         <div className="input-boxes w-grid w-place-content-center w-p-4">
-          <div className="w-card-light form-group w-shadow-large w-p-3">
+          <div className="w-card w-card-light form-group w-shadow-large w-p-3">
             <div className="input-group mb-3">
               <span className="input-group-text w-black-gradient w-text-champagne" id="basic-addon1">Title</span>
               <input type="text" value={title} onChange={handleTitle} className="w-form-input w-border-solid w-border-width-1 w-border-apricot
-                    w-form-input-animated"
+                   "
                 placeholder="Title" aria-describedby="helpId"></input>
             </div>
 
             <div className="input-group mb-3">
               <span className="input-group-text w-black-gradient w-text-champagne" id="basic-addon1">Blog</span>
               <textarea type="text" value={description} onChange={handleDescription} className="w-form-input w-border-solid w-border-width-1 w-border-apricot
-                    w-form-input-animated"
+                   "
                 placeholder="Description" aria-describedby="helpId" />
             </div>
 
@@ -220,9 +220,10 @@ const BlogCreate = () => {
                 uploader(e);
               }}
             />
-
-            <button type="button" className="w-bg-orchid w-p-left-3 w-p-right-3 w-p-top-1 w-p-bottom-1 w-text-champagne
-                w-border-radius-3 w-blink w-m-top-4" onClick={handleAdd}>Add </button>
+            <div className="w-text-center">
+              <button type="button" className="w-p-left-3 w-p-right-3 w-p-top-1 w-p-bottom-1 w-border-radius-3 w-m-top-4 w-m-right-2
+               w-shadow-medium w-border-solid w-border-width-1 w-border-purple w-text-orchid w-darkmode-hover" onClick={handleAdd}>Add </button>
+            </div>
 
           </div>
         </div>
@@ -235,7 +236,7 @@ const BlogCreate = () => {
             <div key={item.id}>
               <div className="individual-blog" style={blog_body}>
                 <div className="blog-body">
-                  <li className="nav-item text-center blog-title" key={item.id}>{item.title}
+                  <li className="nav-item text-center blog-title w-m-top-7" key={item.id}>{item.title}
                     <span>
                       <div>
                         <button className="btn border border-primary ml-3 mr-3 mt-3" onClick={HandleTheme} style={blog_body}>Change Theme</button>
