@@ -50,8 +50,8 @@ function Footer() {
         </div>
         <div className="border-t border-gray-800">
           <div className="container px-5 py-8 flex flex-wrap mx-auto items-center">
-            <div className="flex md:flex-nowrap flex-wrap justify-center items-center md:justify-start">
-              <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+            <div className="grid place-content-center">
+              <button className="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
                 <a href="mailto:shubhmtiwri00@gmail.com?subject = Feedback&body = Message"> Send Email</a>
               </button>
             </div>

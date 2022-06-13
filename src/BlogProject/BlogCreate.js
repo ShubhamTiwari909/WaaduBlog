@@ -91,13 +91,13 @@ const BlogCreate = () => {
       <div className="h-screen bg-indigo-100 flex justify-center items-center">
         <form className="w-purple-claymorphism w-full max-w-xs lg:max-w-md md:max-w-sm flex flex-col py-5 px-8 " action="">
           <label className="text-gray-700 font-bold py-2" htmlFor="">Title</label>
-          <input className="text-gray-700 shadow border-2 border-purple-300 rounded focus:outline-none focus:shadow-outline py-1 px-3 mb-3"
+          <input className="text-gray-700 shadow border-2 border-purple-300 rounded focus:outline-none focus:shadow-outline py-1 px-3 mb-3 w-darkmode-hover"
             type="text" placeholder="Title" value={title} onChange={handleTitle} />
           <label className="text-gray-700 font-bold py-2" htmlFor="">Description</label>
-          <textarea className="text-gray-700 border-2 border-purple-300 shadow roundedmb-3 py-1 px-3 focus:outline-none focus:shadow-outline"
+          <textarea className="text-gray-700 border-2 border-purple-300 shadow roundedmb-3 py-1 px-3 focus:outline-none focus:shadow-outline w-darkmode-hover"
             placeholder="Description" value={description} onChange={handleDescription}></textarea>
           <label className="text-gray-700 font-bold py-2" htmlFor="">Image</label>
-          <input className="text-gray-700 border-2 border-purple-300 shadow rounded  focus:outline-none focus:shadow-outline py-1 px-3 mb-3"
+          <input className="text-gray-700 border-2 border-purple-300 shadow rounded  focus:outline-none focus:shadow-outline py-1 px-3 mb-3 w-darkmode-hover"
             type="file"
             onChange={(e) => {
               setImage(e.target.files[0]);
@@ -142,7 +142,7 @@ const BlogCreate = () => {
 
               </div>
               <div className="text-center delete-btn">
-                <button className="btn btn-danger" onClick={() => handleRemove(item.id)}>Delete</button>
+                <button className="w-bg-hotpink w-text-ice w-p-x-3 w-p-y-2 w-border-radius-3 w-shadow-medium" onClick={() => handleRemove(item.id)}>Delete</button>
               </div>
 
             </div>

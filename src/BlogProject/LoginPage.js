@@ -13,8 +13,8 @@ function LoginPage() {
                     <label className="text-gray-700 font-bold py-2" for="">Password</label>
                     <input className="text-gray-700 shadow border rounded border-gray-300 mb-3 py-1 px-3 focus:outline-none focus:shadow-outline"
                         type="password" placeholder="********" />
-                    <div className="flex justify-between items-center my-4">
-                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded py-2 px-4">
+                    <div className="grid grid-cols-2 gap-2 justify-between my-4">
+                        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold rounded py-1 px-4">
                             Sign In
                         </button>
                         <div className="text-blue-600 hover:text-blue-800 font-bold">

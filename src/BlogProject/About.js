@@ -8,7 +8,7 @@ import Fade from 'react-reveal/Fade';
 
 const About = () => {
     return (
-        <div classNameName='bg-neutral-100'>
+        <div className='bg-neutral-100'>
             <h1 className='flex justify-center text-3xl text-slate-200 font-semibold bg-gradient-to-r from-slate-700 to-slate-900
                     py-5 mt-5 border-y-4 border-y-violet-600'>
                 <p className='bg-clip-text text-transparent bg-gradient-to-r from-purple-200 via-blue-200 to-purple-200'>About The Creator</p>

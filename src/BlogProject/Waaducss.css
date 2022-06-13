@@ -620,7 +620,7 @@
 .w-blue-claymorphism,
 .w-red-claymorphism,
 .w-purple-claymorphism {
-    padding: 50px;
+    padding: 20px;
     border-radius: 50px;
 }
 
@@ -641,7 +641,7 @@
 }
 
 .w-red-claymorphism {
-    background-color: hsl(10deg, 20%, 95%);
+    background-color: hsl(10deg, 10%, 95%);
     box-shadow:
         34px 34px 68px hsl(10deg, 10%, 50%),
         inset -8px -8px 16px hsl(10deg, 20%, 50%),
@@ -2073,32 +2073,32 @@
 /* text alignment */
 
 /* center */
-.text-center {
+.w-text-center {
     text-align: center;
 }
 
 /* start */
-.text-start {
+.w-text-start {
     text-align: start;
 }
 
 /* end */
-.text-end {
+.w-text-end {
     text-align: end;
 }
 
 /* left */
-.text-left {
+.w-text-left {
     text-align: left;
 }
 
 /* right */
-.text-right {
+.w-text-right {
     text-align: right;
 }
 
 /* justify */
-.text-justify {
+.w-text-justify {
     text-align: justify;
 }
 
@@ -3103,7 +3103,7 @@
     .w-blue-claymorphism,
     .w-red-claymorphism,
     .w-purple-claymorphism {
-        padding: 40px;
+        padding: 15px;
         border-radius: 50px;
     }
 
@@ -3355,7 +3355,7 @@
     .w-blue-claymorphism,
     .w-red-claymorphism,
     .w-purple-claymorphism {
-        padding: 50px;
+        padding: 10px;
         border-radius: 50px;
     }
 
