@@ -3,8 +3,8 @@ import Login from './LoginPage'
 import { Routes, Route, NavLink } from 'react-router-dom'
 function SignUpPage() {
     return (
-        <div className="py-20 h-screen bg-indigo-100 px-2 my-8">
-            <div className="max-w-md mx-auto bg-white rounded-lg overflow-hidden md:max-w-md">
+        <div className="py-20 bg-indigo-100 px-2 mt-10">
+            <div className="w-green-claymorphism bg-white max-w-md mx-auto overflow-hidden md:max-w-md">
                 <div className="md:flex">
                     <div className="w-full p-3 px-6 py-10">
 

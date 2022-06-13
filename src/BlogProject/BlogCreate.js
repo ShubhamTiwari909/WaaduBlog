@@ -1,11 +1,11 @@
 import { v4 as uuidv4 } from 'uuid';
 import { React, useState, useRef } from 'react';
+import './Waaducss.css'
 
 const initialList = [];
 
+
 const BlogCreate = () => {
-
-
   const [list, setList] = useState(initialList);
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -89,7 +89,7 @@ const BlogCreate = () => {
   return (
     <div>
       <div className="h-screen bg-indigo-100 flex justify-center items-center">
-        <form className="w-full max-w-xs lg:max-w-md md:max-w-sm bg-white flex flex-col py-5 px-8 rounded-lg shadow-lg" action="">
+        <form className="w-purple-claymorphism w-full max-w-xs lg:max-w-md md:max-w-sm flex flex-col py-5 px-8 " action="">
           <label className="text-gray-700 font-bold py-2" htmlFor="">Title</label>
           <input className="text-gray-700 shadow border-2 border-purple-300 rounded focus:outline-none focus:shadow-outline py-1 px-3 mb-3"
             type="text" placeholder="Title" value={title} onChange={handleTitle} />
