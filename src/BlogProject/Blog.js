@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import Header from './Header';
 import AboutMe from './About';
 import Contact from './Contact'
@@ -21,16 +21,27 @@ import LoginPage from './LoginPage';
 import './Waaducss.css'
 
 function Blog() {
+    const [user, setLoginUser] = useState()
     const [collapseState, setCollapseState] = useState(true);
+    const [loginButton,setLoginButton] = useState("Login")
 
     const isCollapse = () => {
-        if(collapseState){
+        if (collapseState) {
             setCollapseState(false)
+            setTimeout(() => {
+                setCollapseState(true)
+            }, 100);
         }
-        else{
+        else {
             setCollapseState(true)
         }
+        if(loginButton === "Log out") {
+            setLoginButton("Login")
+        }
     }
+
+    console.log(user)
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-dark w-p-left-5 font-weight-bold fixed-top w-black-gradient w-text-champagne w-p-top-3 w-p-bottom-3 ">
@@ -74,7 +85,7 @@ function Blog() {
                         <div className="w-place-self-start">
                             <div className="w-m-right-2 w-p-left-3 w-p-right-3 w-p-top-1 w-p-bottom-1 w-border-solid w-border-width-1 w-border-bluetack
                             w-border-radius-2  w-text-bluetack w-darkmode-hover w-shadow-medium">
-                                <NavLink to="/login" onClick={isCollapse}>Login</NavLink>
+                                <NavLink to="/login" onClick={isCollapse}>{loginButton}</NavLink>
                             </div>
                         </div>
                     </div>
@@ -82,7 +93,9 @@ function Blog() {
             </nav>
 
             <Routes>
-                <Route path="/" element={
+
+               
+                <Route path="*" element={
                     <div>
                         <Header />
                         <Help />
@@ -123,14 +136,14 @@ function Blog() {
 
                 </Route>
 
-                <Route path="/login" element={<LoginPage />}>
+                <Route path="/login" element={<LoginPage user={user} setLoginUser={setLoginUser} setLoginButton={setLoginButton} />}>
 
                 </Route>
             </Routes>
 
 
             <Footer />
-        </div>
+        </div >
     )
 }
 

@@ -13,8 +13,6 @@ function SignUpPage() {
     const [userAddedMessage, setUserAddedMessage] = useState(false);
 
 
-    const RegistrationMessage = `${registrationState ? "w-bg-palegreen" : "w-bg-punch"} w-p-top-2 w-p-bottom-2 w-heading-1 w-font-bold w-text-center w-text-champagne`;
-
     useEffect(() => {
         axios
             .get("http://localhost:3001/Users")
@@ -64,15 +62,13 @@ function SignUpPage() {
                     setUserAddedMessage(false);
                 }, 2000);
                 e.preventDefault();
-                window.location.reload();
             }
         }
     }
 
 
     return (
-        <div className="py-20 bg-indigo-100 px-2 mt-10">
-
+        <div className="py-20 bg-indigo-100 mt-10 px-4">
             <div
                 style={{ display: userAddedMessage ? "block" : "none" }}
                 className="w-green-claymorphism w-text-ink w-text-center text-sm md:text-md lg:text-xl w-m-bottom-5"
