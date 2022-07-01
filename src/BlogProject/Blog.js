@@ -23,7 +23,7 @@ import './Waaducss.css'
 function Blog() {
     const [user, setLoginUser] = useState()
     const [collapseState, setCollapseState] = useState(true);
-    const [loginButton,setLoginButton] = useState("Login")
+    const [loginButton, setLoginButton] = useState("Login")
 
     const isCollapse = () => {
         if (collapseState) {
@@ -35,7 +35,7 @@ function Blog() {
         else {
             setCollapseState(true)
         }
-        if(loginButton === "Log out") {
+        if (loginButton === "Log out") {
             setLoginButton("Login")
         }
     }
@@ -44,7 +44,7 @@ function Blog() {
 
     return (
         <div>
-            <nav className="navbar navbar-expand-lg navbar-dark w-p-left-5 font-weight-bold fixed-top w-black-gradient w-text-champagne w-p-top-3 w-p-bottom-3 ">
+            <nav className="navbar navbar-expand-lg navbar-dark w-p-left-5 font-weight-bold fixed-top bg-gradient-to-r from-indigo-600 via-purple-700 to-pink-800 w-text-champagne w-p-top-3 w-p-bottom-3 ">
                 <div className="navbar-brand">WaaduBlogs</div>
                 <button className="navbar-toggler" type="button" onClick={() => setCollapseState(true)} data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
@@ -78,13 +78,13 @@ function Blog() {
                     <div className="w-grid lg-w-grid-cols-2">
                         <div className="w-place-self-start w-m-bottom-2">
                             <div className="w-m-right-2 w-p-left-3 w-p-right-3 w-p-top-1 w-p-bottom-1 w-border-solid w-border-width-1 w-border-palegreen
-                            w-border-radius-2 w-text-palegreen w-darkmode-hover w-shadow-medium">
+                            w-border-radius-2 text-green-200 w-darkmode-hover w-shadow-medium">
                                 <NavLink to="/signup" onClick={isCollapse}>Signup</NavLink>
                             </div>
                         </div>
                         <div className="w-place-self-start">
                             <div className="w-m-right-2 w-p-left-3 w-p-right-3 w-p-top-1 w-p-bottom-1 w-border-solid w-border-width-1 w-border-bluetack
-                            w-border-radius-2  w-text-bluetack w-darkmode-hover w-shadow-medium">
+                            w-border-radius-2 text-blue-200 w-darkmode-hover w-shadow-medium">
                                 <NavLink to="/login" onClick={isCollapse}>{loginButton}</NavLink>
                             </div>
                         </div>
@@ -94,7 +94,7 @@ function Blog() {
 
             <Routes>
 
-               
+
                 <Route path="*" element={
                     <div>
                         <Header />

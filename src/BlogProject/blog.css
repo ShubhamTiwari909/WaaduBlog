@@ -14,8 +14,10 @@ section {
 }
 
 .header-content {
+    display:grid;
+    place-content: center;
     height: 110vh;
-    background-image: url('https://c4.wallpaperflare.com/wallpaper/108/140/869/digital-digital-art-artwork-fantasy-art-drawing-hd-wallpaper-preview.jpg');
+    background-image: url('https://images.pexels.com/photos/389818/pexels-photo-389818.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -24,7 +26,6 @@ section {
 
 .social-btn {
     font-size: 2rem;
-
 }
 
 .book-now {
@@ -159,14 +160,6 @@ section {
     color: black;
 }
 
-.success-text {
-    font-Family: 'Red Hat Display';
-    margin-Top: "18px";
-    letter-spacing: 2rem;
-    font-Weight: "bold";
-    font-size: 7rem;
-
-}
 
 
 
@@ -178,6 +171,12 @@ section {
 
 @media only screen and (min-width: 350px) and (max-width:900px) {
 
+    .header-content{
+        justify-content: center;
+        align-items: start;
+        background-image:url("https://images.pexels.com/photos/2422497/pexels-photo-2422497.jpeg?auto=compress&cs=tinysrgb&w=600")
+    }
+
     .fashion-background,
     .food-background,
     .music-background,
@@ -188,10 +187,6 @@ section {
         background-position: center;
     }
 
-    .success-text {
-        letter-spacing: 1rem;
-        font-size: 3rem;
-    }
 
     .book-now {
         margin-top: 1rem;
